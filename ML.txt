@@ -1,0 +1,74 @@
+Artificial Intelligence : capabilities of machines to perform task that require human intelligence, 
+
+
+Machine learning : 
+	it is all about algorithms identifying patterns and doing some predictions
+	if we train AI that on 33% humidity in  jaipur it was raining and on +14% humidity in pune caused heavy rain then when asked the model can predict that on what % of humidity in ahemdabad it is going to rain...
+
+
+Deep Learning: 
+	subset of machine learning
+	this uses multi-layer neural network
+	requires a very huge amount of data 
+	used for training unstructured data(images, video and audio)
+
+one question: how does AI read the picture?
+the picture or any image is converted into the data or the set of data of RGB for each pixel of that picture 
+(uses convolutional neural network)
+
+BRANCHES OF THE MACHINE LEARNING:
+
+1. supervised learning: 
+	it is majourly learning from labeled examples and there are often correct answers given 
+ex - categorising an object as cat or dog
+
+2. unsupervised learning:
+	there are no labelled examples here and the model is trained to find the patterns in unlabelled data and predict the structure 
+	it can work to uncover the hidden patterns too
+	no true info about data is known
+ex - calling a kid to categorising the dogs and cat where the kid has no idea what is a dog and what is a cat.
+
+3. Reinforcement learning:
+	here the model is basically trained like a pet(dogs and cats and bla bla) think of it like a chess, there are given rewards for the winning moves...
+
+
+
+FEATURES:
+	the thing that categorise the data that is given to train the model.
+
+
+
+DIMENSIONALITY:
+	the dimension of the training data 
+
+	
+
+MODEL COMPLEXITY:
+	more complexity means more parameters
+
+
+
+
+
+NEURAL NETWORKS:
+	in human brain inspired model consisting of nuerons(nodes) arranged in a layer
+single neuron: 
+	z = g(Σ wᵢxᵢ + b)
+x - inputs(features)
+w - weights(priority of the inputs)
+b - bias(to adjust the threshold)
+g - activation function
+
+w and b keeps updating during the training of the models and these are the actual parameters of the model
+
+
+ANN (artificial neural networks):
+	every neuron is connected to the neuron of another layer
+	good for tabular data(humidity -> rain)
+
+
+CNN (convolutional Neural network):
+	advanced version of ANN
+	special network for images and videos 
+	non-tabular data
+	
