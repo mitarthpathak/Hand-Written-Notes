@@ -1,0 +1,68 @@
+Docker---
+
+what is image?
+contains the recipe
+template/blueprint(basically the class)
+---
+what is container?
+contains the code
+running instance of the template(basically the object of the class)
+
+by one image we can have multiple containers
+
+
+
+//now here is an example of dockerfile for a backend java script project-
+#the version of NODE, this is the start of the dockerfile
+FROM node:22
+
+#go to the directory, just like cd in terminal
+WORKDIR /app
+
+#copy the package json file(if available)
+COPY package*.json ./
+
+#Install all dependencies
+RUN npm install
+
+#copy the app into the container after the package.json
+COPY ..
+
+#set port environment variable
+ENV PORT=9000
+
+#exposing it so computer can excess it
+EXPOSE 9000
+
+#run the app
+CMD ["npm","start"]
+
+---
+
+now there are several problems like if we copy all the folders we will have node_modules too and
+we don't want that so to fix this create a .dockerignore file
+and inside just write the name of the file
+
+>node_modules
+
+
+now to run the above dockerfile we will create an image in the terminal
+here build ke baad -t means tag name jisme image ka name and then folder jaha docker file hai
+>docker build -t <name of the image> .
+
+
+now to run the container we are again in the terminal gonnatype this
+>docker run -p 9000:9000 <name of the image>
+here -p is states the port forwarding //the bridge for computer and container ports
+the left 9000 is computer port and the right one is container port 
+
+
+
+
+
+DOCKER COMPOSE-
+where we create a seperate containers for frontend,backend,database
+and we use DOCKER COMPOSE to link the containers
+here the VOLUME comes-
+
+VOLUME  is a folder which is created and can be accessed by the docker containers to share the data from frontend container to backend container

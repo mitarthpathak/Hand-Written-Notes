@@ -1,0 +1,6 @@
+polymorphism is of two types-
+  1 static(compile time):
+	function overloading
+  2 dynamic(runtime):
+	function overriding
+		using virtual function and sometimes we write "override" too

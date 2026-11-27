@@ -1,0 +1,36 @@
+concept of reference in C++:
+
+a reference is an alternative name for an existing variable. once a reference is initialised. it shared the exact same memory location as the original variable.
+any operation performes on the reference, directly updated and affects the original variable. 
+
+it refers as "&"
+
+PROPERTIES OF REFERENCE :
+1. must be initialised
+2. cannot be reseted
+3. cannot be null
+4. no internal storage
+5. automatically dereferencing
+
+CORE USES OF REFERENCE:
+- passed by reference in function
+- const reference for performance
+
+
+NEW AND DELETE
+	dynamic memory allocation in c++ allow you to request and allocate memory from the heap(free store) at run time instead of a compile time, it refers to perform memory allocations manually by a programmer. dynamic memory allocations give programmer the ability to allocate memory at the run time on the heap.
+	Deallocate memory when there is no longer needed,
+	Dynamic memory allocation is use full when the required memory size cannot be determined during runtime
+
+key function for dynamic memory allocations-
+1 new - allocated memory in C++
+2 delete - deallocate memory in C++
+
+	NEW operator- the new operator denotes the request for memory allocation on the pre-store. if sufficient memory is available a new operator is initialised the memoryand return the address of newly allocated and initialise memory to the pointer variable.
+
+
+INLINE FUNCTION:
+	an inline functions in c++ is a function whose compile code is inserted, directly into the calling code and at every point it is invoked, rather than a traditional function call mechanism
+	inline keyword are request that the compiler eliminate the standard execution overhead such as saving CPU registers, pushing argument on the stack
+	it reduce the function call overhead
+	inline is request, not guarantee by a compiler

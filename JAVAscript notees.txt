@@ -1,0 +1,368 @@
+static typed= 
+	each variable and expression's datatype is known at the time of the compilation. like in C,C++,JAVA
+ex- int a = 9;
+	datatype cannot be changed later
+
+dynamic typed=
+	the variable can be of any datatype at anytime like pehle int and then string all in the same variable
+	datatype can be changed later	
+
+
+let a = "yoi wassup";
+const b = "hui";//this cannot be changed
+console.log(a);//to print
+
+normal quotes and backsticks
+like one-
+console.log("heillo");
+and another-
+console.log(`hello ${nameOfTheVariable}`;
+like in btw the ${ } i can even do the dynamics operations like 2+2 and passing the variable and all but to use ${ } use bacticks
+
+
+You dont have to specify the datatype of numbers like int, float because there is a "number" datatype in javascript for int and float so just like python do it directly with const or let
+
+
+
+some use of the math module(relax no need to import any stuff)
+let max = Math.max(3,4,5);
+Math.random();
+max = round(7.8);
+max = floor(7.8);	//round down
+max = ceil(7.8);	//round up
+max = trunc(7.8);	//remove any decimal part
+max = pow(4,2);		//4 ki power 2
+max = sqrt(81);		//9 output aayega
+here there is no need to import the Math module
+
+
+NOWW 
+creating an object(not like C++,JAVA)
+to create an object(it's kinda like the dictionary in the python)
+so the syntax is:
+const person = {
+	name : "mitarth",
+	age: 19,
+}
+//to print any component
+console.log(person.name)
+
+
+
+
+
+
+
+for creating an array we use -
+const arr = [1,3,4,5,6,7];
+console.log(arr);
+
+for getting today's date we do-
+const date = new Date();
+console.log(date);
+
+#the above array and date is both of the object datatype
+
+
+all operators are same as other languages ok?
+>,<,>=,<=,==,!= and the logical ones too
+but there 2 more operators, they check and returns true only if the value and the datatype both are same.
+strict equality 	===
+strict inequality	!==
+
+MORAL OF THE STORY- use the strict ones
+
+
+conditional statements-
+
+if(condition){
+}
+else if(condition){
+} else{ 
+}
+
+loop - 
+>>>
+let i=0;
+while(i<10){
+	console.log(i);
+	i++;
+}
+for (let j=0;j<10;j++){
+	console.log(j);
+}
+
+---------------------------------------
+Functions- 
+the syntax of the function is:
+>>>
+function square(number){
+	return number*number;
+}
+let a = square(5);
+console.log(a);
+
+now there are three ways to declare a function- 
+1. function declaration(normal one)
+function square(num){
+	//statements
+	//advantage of using "this" keyword
+}
+
+2. function expression
+const square = function(num){
+	//statements
+}
+
+3. arrow functions(the modern one)
+const square = (num) => {
+	//statements
+}
+
+advantage of arrow functions is that if the code is of less than one line then we can write this in one single line
+for example=
+const sqaure = (num) => {
+	return num*num;
+}
+instead of the writing the above four steps just write one single line-
+const square = (num) => num*num;
+
+
+
+how to accept or take input:
+there are two ways of doing that:
+1 is windows prompt(easy)
+2 is HTML textbox(professional way)
+
+                      1: window prompt:
+let a;
+a = window.prompt("what is the value of a:");
+
+                      2: html box:
+write this in your html file first:
+<label> input</label>
+<input id="myText">
+<button id="mySubmit">submit</button>
+
+and in javascript write this one:
+document.getElementById("mySubmit").onclick = function(){
+		let valueInput = document.getElementById("myText").value;
+		console.log(valueInput);
+}
+
+
+
+
+TYPE CONVERSION/TYPE CASTING:
+let a=window.prompt("enter your age:");
+a = Number(a);
+a = String(a);
+a = Boolean(a);
+
+
+
+
+strings method:
+let username = "mitarth ";
+username.length			//the lenght of the string
+username.trim()			//remove the space before and after the string
+	.toUpperCase		//make the complete string in capital
+	.toLowerCase
+	.repeat			//copy and paste the strings
+	.startsWith("M");	//returns in boolean
+	.replaceAll("-","_");	/replace karega 
+
+
+you can also slice a string:
+const fullname = "mitarth pathak";
+let firstname = fullname.slice(0,7);
+let firstname = fullname.slice(9,14);
+
+
+
+
+
+
+nowwww inside the java file you will write :
+let username;
+
+document.getElementById("mySubmit").onclick = function(){
+	username = document.getElementById("myText").value;
+	console.log(username);
+	document.getElementById("header").textContent = `hi ${username}`;
+
+}
+
+to get a value from index we use "getElementById" and then a . 
+then :
+	.value		//isse value ko store kr skte h input ki
+	.onclick	//button ke onclick pr kya hoga is assigned here
+	.checked	//it gives us -> if button is checked then true if not then false	
+	.textContent	//h1,h2,h3 jese text ke content ko change kr skte h
+	
+
+
+
+
+
+
+
+METHOD CHAINING ->
+to use multiple functions in one single line:
+ex:-
+
+let username=" mitarth";
+username = username.trim().charAt(0).toUpperCase();
+//this above line first remove the extra space then the first character will be taken out and made uppercase
+
+
+arrays:
+
+let fruits=["apple","orange"];
+fruits.sort().reverse();
+
+for (let fruit of fruits){//fruit ki jagah x,y kuch bhi rkh skte h
+	console.log(fruit);
+}
+
+
+SPREAD OPERATOR:
+		like you cant just pass a complete array into any function you have to unpack it and for that you can use this ...<arrayName> 
+
+ex- 
+numbers = [1,2,3,4,5,6]
+console.log(Math.max(numbers));		//here it is going to throw an error
+console.log(Math.max(...numbers));	//here ye unpack hoga and output aajayega 6!!!!
+
+
+you can even break/spread a string into a array of characters,
+ex - 
+let username = "mitarth";
+let letters = [...username];		//['m','i','t','a','r','t','h']
+let letters = [...username].join("-");	//m-i-t-a-r-t-h
+
+--------
+rest parameters: does the opposite of the spread(instead of breaking down the array, it creates an array out of the elements.
+
+
+
+callback: if you want to make sure ki ye function fix uske previous function ke baad hi invoke ho jaaye to use this:
+syntax:::
+
+hello(goodbye);
+
+function hello(callback){
+	console.log("inside the hello function");
+	callback();
+}
+
+function goodbye(){
+	console.log("inside the goodbye function");
+}
+
+//here since hamne hello ke andar goodbye pass kia h and last me usko call kara h to vo obv uske baad hi run hoga
+
+
+
+
+destructing:::
+//this is an object of user-- 
+const user = { name: "Mitarth", age: 20, city: "Jaipur" };
+//to print these object values:
+console.log(user.name);
+console.log(user.age);
+console.log(user.jaipur);
+
+
+// Purana tareeka
+const name = user.name;
+const age = user.age;
+
+// Destructuring - same result, ek line mein
+const { name, age } = user;
+
+console.log(name); // "Mitarth"
+console.log(age);  // 20
+
+
+more example:
+const arr = [10, 20, 30];
+const [first, second] = arr;
+console.log(first);  // 10
+console.log(second); // 20
+
+ 
+
+
+resolve and reject- 
+
+function getHay() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const mili = true;  // maan lo hay mil gayi
+      if (mili) {
+        resolve("Hay mil gayi 🌾");
+      } else {
+        reject("Hay nahi mili 💥");
+      }
+    }, 2000);  // 2 second lagenge
+  });
+}
+
+
+
+
+
+
+ek example of promise based function - 
+function donkeyGetHay() {
+  return new Promise((resolve, reject) => {
+    console.log("Donkey hay lene gaya... 🐴");
+    
+    setTimeout(() => {
+      const hayMili = Math.random() > 0.3;  // 70% chance mili
+      
+      if (hayMili) {
+        resolve("Hay mil gayi 🌾");   // ✅
+      } else {
+        reject("Donkey bhaag gaya 💥"); // ❌
+      }
+    }, 2000);
+  });
+}
+
+// Use karo
+donkeyGetHay()
+  .then(hay => console.log("Success:", hay))
+  .catch(err => console.log("Fail:", err));
+
+
+
+
+
+
+
+
+
+
+async - makes a function return a promise
+await - makes an async function wait for a promise
+
+
+async function doChores() {
+  const hay = await donkey.getHay();     // wait here until hay arrives
+  const water = await donkey.getWater(); // then wait for water
+  const wood = await donkey.getWood();   // then wait for wood
+  console.log("Done!");
+}
+
+
+
+
+
+fetch API - 
+Function used for making HTTP requests to fetch resources. (JSON mostly)
+
+
+
+<created an 

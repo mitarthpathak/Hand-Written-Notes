@@ -1,0 +1,56 @@
+FUNCTION OVERLOADING--
+function overiding is an inheritance feature, that allows a derived class to redefine a virtual function of the base class.
+ it enables the same function call to behave differently depending on the object making it key feature of runtime polymorphism
+	provide specialised behaviour for derived class object.
+	promote code reuse and flexibility to inheritence
+	the override keyword
+	to avoid mistakes when overriding functions in C++ introduce the override keyword
+	ensure that actually overriding a virtual function	
+	if the signature doesn't match any base class function the compiler gives an error 
+	
+HW QUESTIONS:
+	function overriding using base class pointer
+	overriding without virtual function
+
+
+abstract class-
+	this class in C++ is a important part of OOPS, in C++ a class that is desgined to be used executedly as a base class. the main purpose is to define a common interface as a blueprint for it's dervied class without providing a complete implementation
+	a class that contain a pure virtual function is known as pure abstract class, we cannot create an object of an abstract class, however we can derive classes from them and use their data member and the member function except pure virtual function
+
+PURE VIRTUAL FUNCTION: these are used
+	1 if a function doesn't have any use in the base class
+	but the function must be implemented by all the derived class
+	a pure virtual function doesn't have any function body and must be end with "= 0"
+		example of syntax: "virtual void hi() = 0;"
+
+difference btw virtual func and pure virtual func
+
+VIRTUAL FUNCTION(left side)
+1 a virtual function is the member function of base class which can be redefined by the
+2 class having virtual function are not abstract
+3 defination is given in a base class
+4 base class having virtual function can be initialised therefore it's object can be made
+
+
+PURE VIRTUAL FUNCTION:(right side)
+1 a pure virtual function is the member function of base class goes only declared to provide in a base class and should be redefined in the derived class otherwise derived class also become abstract
+2 base class contain pure virtual function become abstract
+3 no defination is given in a base class
+4 base class having pure virtual function become abstract therfore it cannot be initialised
+
+
+question on differences: structure and union, structure and class, method overloading and method overriding, static and dynamic, new and delete, constructor and destructor, compile time and runtime(part of polymorphism), file and database, stack and heap,
+
+
+
+
+
+
+STATIC (DATA MEMBER & MEMBER FUNCTION)-
+	gives memory without the need of an object
+
+
+ABSTRACT CLASS-
+	1.min 1 virtual function
+	2.blueprint of another class
+	3.can't be initialised directly
